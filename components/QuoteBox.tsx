@@ -1,0 +1,35 @@
+"use client"
+
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+
+interface QuoteBoxProps {
+    id?: string;
+    quote:string;
+    url:string;
+}
+export default function QuoteBox({id, quote, url}:QuoteBoxProps){
+    const router = useRouter()
+    return (
+        <div className="max-w-[180px] tracking-tight break-inside-avoid" onClick={() => router.push(`/quote/${id}`) }>
+            <div className="w-[180px] max-h-[220px] overflow-hidden cursor-pointer">
+            {
+                url && <Image 
+                src={url}            
+                alt="Quote image"
+                width={180}
+                height={220}
+                className="object-fill w-full h-full "
+                unoptimized
+                
+            
+                priority
+                />
+            }
+            </div>
+            <p className="mt-2 text-start">
+            {quote}
+            </p>
+        </div>
+    )
+}
