@@ -13,14 +13,21 @@ export default async function Page({
      <h1 className="uppercase text-xl text-primary font-medium">{quote.name}</h1>
      <div className="mt-20">
      <div className="w-[300px] max-h-[400px] overflow-hidden mx-auto">
-     <img
-        src={quote.image}
-        
-        alt="Quote image"
-        className="object-fill w-full h-full "
-        />
-     </div>
-    <p className="mt-3 text-start max-w-[300px]">
+      {
+          quote.image && <Image 
+          src={quote.image}            
+          alt="Quote image"
+          width={300}
+          height={400}
+          className="object-fill w-full h-full "
+          unoptimized
+          
+      
+          priority
+          />
+      }
+      </div>
+    <p className="mt-4 text-start max-w-[300px]">
     {quote.quote}
     </p>
      </div>

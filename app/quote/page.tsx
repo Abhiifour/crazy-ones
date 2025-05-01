@@ -50,13 +50,7 @@ export default  async function Blog(){
         <div className="max-w-[600px] mx-auto mt-14">
             <h1 className="uppercase text-xl text-primary text-center mb-20 font-semibold">Quotes</h1>
           
-            <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
-            {/* <QuoteBox id="1" quote="That's one small step for a man, a giant leap for mankind."/>
-            <QuoteBox id="1" quote="The love of money is the root of all evil."/>
-            <QuoteBox id="1" quote="The truth will set you free"/>
-            <QuoteBox id="1" quote="The only thing we have to fear is fear itself."/>
-            <QuoteBox id="1" quote="The way to get started is to quit talking and begin doing"/>
-            <QuoteBox id="1" quote="So we beat on, boats against the current, borne back ceaselessly into the past."/> */}
+            <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4 ">
             {
               quotes.map((quote) => <QuoteBox id={quote.slug} quote={quote.quote} url={quote.image} key={quote.id}/>)
             }

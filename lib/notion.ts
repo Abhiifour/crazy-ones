@@ -1,3 +1,4 @@
+"use server"
 import { Client } from "@notionhq/client";
 import { NotionAPI } from "notion-client";
 

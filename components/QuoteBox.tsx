@@ -27,7 +27,7 @@ export default function QuoteBox({id, quote, url}:QuoteBoxProps){
                 />
             }
             </div>
-            <p className="mt-2 text-start">
+            <p className="mt-4 text-start">
             {quote}
             </p>
         </div>
