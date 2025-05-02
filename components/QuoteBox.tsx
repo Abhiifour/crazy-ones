@@ -19,7 +19,7 @@ export default function QuoteBox({id, quote, url}:QuoteBoxProps){
                 alt="Quote image"
                 width={180}
                 height={220}
-                className="object-fill w-full h-full "
+                className="object-contain w-full h-full "
                 unoptimized
                 
             
@@ -27,7 +27,7 @@ export default function QuoteBox({id, quote, url}:QuoteBoxProps){
                 />
             }
             </div>
-            <p className="mt-4 text-start">
+            <p className="mt-[6px] text-start">
             {quote}
             </p>
         </div>

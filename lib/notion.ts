@@ -1,8 +1,10 @@
 "use server"
 import { Client } from "@notionhq/client";
 import { NotionAPI } from "notion-client";
+import { env } from "process";
 
 const notionClient = new NotionAPI()
+
 
 
 export async function getPage(){
@@ -14,12 +16,12 @@ export async function getPage(){
 
 
 const notion = new Client({
-    auth:"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"
+    auth:env.NOTION_AUTH_TOKEN || ""
 })
 
 export async function getAllQuotes(){
     const quotes = await notion.databases.query({
-        database_id:'1e5da8a59a8f80308178e3f81e2f2880',
+        database_id:env.NOTION_DATABASE_ID || "",
         filter:{
             property:'Published',
             checkbox:{

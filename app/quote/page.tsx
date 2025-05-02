@@ -44,11 +44,11 @@ export default  async function Blog(){
 //     },[])
 
     const quotes = await getAllQuotes()
-    console.log(quotes)
+    // console.log(quotes)
    
     return (
-        <div className="max-w-[600px] mx-auto mt-14">
-            <h1 className="uppercase text-xl text-primary text-center mb-20 font-semibold">Quotes</h1>
+        <div className="max-w-[600px] mx-auto mt-14 flex flex-col items-center pb-20">
+            <h1 className="uppercase text-xl text-primary text-center mb-20 font-semibold">Crazy Ones</h1>
           
             <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4 ">
             {
