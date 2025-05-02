@@ -27,7 +27,7 @@ export default async function Page({
           />
       }
       </div>
-    <p className="mt-4 text-start max-w-[300px]">
+    <p className="mt-4 text-start max-w-[300px] text-sm lg:text-base">
     {quote.quote}
     </p>
      </div>

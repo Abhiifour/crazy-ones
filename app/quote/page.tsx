@@ -1,3 +1,4 @@
+
 import { getAllQuotes, getPage } from "@/lib/notion"
 
 // import { NotionRenderer } from "react-notion-x"
